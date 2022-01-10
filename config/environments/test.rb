@@ -6,6 +6,9 @@ require "active_support/core_ext/integer/time"
 # and recreated between test runs. Don't rely on the data there!
 
 Rails.application.configure do
+
+  # devise says to define default url
+  config.action_mailer.default_url_options = { :host => "www.example.com" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   config.cache_classes = true

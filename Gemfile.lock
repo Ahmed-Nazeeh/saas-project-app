@@ -1,3 +1,23 @@
+GIT
+  remote: https://github.com/philsmy/philia.git
+  revision: 64ca74a7c10d0659ff3bd1b6a55352708af4839c
+  branch: main
+  specs:
+    philia (0.1.0)
+      devise (~> 4.8.0, >= 4.8.0)
+      rails (~> 6.1.3, >= 6.1.3.2)
+
+GIT
+  remote: https://github.com/rails/activerecord-session_store.git
+  revision: 0fb99d2fcb798c4f9d8ca741a9e4d8a86ba405e0
+  specs:
+    activerecord-session_store (2.0.0)
+      actionpack (>= 5.2.4.1)
+      activerecord (>= 5.2.4.1)
+      multi_json (~> 1.11, >= 1.11.2)
+      rack (>= 2.0.8, < 3)
+      railties (>= 5.2.4.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,6 +82,7 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.9.3)
       msgpack (~> 1.0)
@@ -79,6 +100,12 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    devise (4.8.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     erubi (1.10.0)
     ffi (1.15.4-x64-mingw32)
     globalid (1.0.0)
@@ -99,9 +126,11 @@ GEM
     mini_mime (1.1.2)
     minitest (5.15.0)
     msgpack (1.4.2)
+    multi_json (1.15.0)
     nio4r (2.5.8)
     nokogiri (1.13.0-x64-mingw32)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     pg (1.2.3)
     public_suffix (4.0.6)
     puma (5.5.2)
@@ -142,6 +171,9 @@ GEM
       thor (~> 1.0)
     rake (13.0.6)
     regexp_parser (2.2.0)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rexml (3.2.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
@@ -172,6 +204,8 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2021.5)
       tzinfo (>= 1.0.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -197,11 +231,14 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  activerecord-session_store!
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  devise
   jbuilder (~> 2.7)
   pg (~> 1.1)
+  philia!
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.4)
