@@ -12,6 +12,19 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+config.action_mailer.delivery_method = :smtp 
+config.action_mailer.default_url_options = {:host => 'ahmed-saas-app.herokuapp.com', :protocol => 'https'}
+config.action_mailer.perform_deliveries = true  
+
+ActionMailer::Base.smtp_settings = {
+  :user_name => ENV['SENDGRID_USERNAME'],
+  :password => ENV['SENDGRID_PASSWORD'],    
+  :domain => 'ahmed-saas-app.herokuapp.com',
+  :address => 'smtp.sendgrid.net',
+  :port => '587',
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
