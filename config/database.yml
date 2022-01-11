@@ -20,20 +20,23 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: postgres
+  #database: postgres
+  port: 5432
 
 development:
   <<: *default
-  #database: postgres_development
+  username: <%= Rails.application.credentials.dig(:postgres , :username) %>
+  password: <%= Rails.application.credentials.dig(:postgres , :password) %>
+  database: postgres_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  username: <%= Rails.application.credentials.dig(:postgres , :username) %>
+  
 
   # The password associated with the postgres role (username).
-  password: <%= Rails.application.credentials.dig(:postgres , :password) %>
+  
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -58,7 +61,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  #database: saas_project_app_test
+  username: <%= Rails.application.credentials.dig(:postgres , :username) %>
+  password: <%= Rails.application.credentials.dig(:postgres , :password) %>
+  database: postgres_test
+
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -67,7 +73,7 @@ test:
 # Instead, provide the password or a full connection URL as an environment
 # variable when you boot the app. For example:
 #
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+DATABASE_URL: "postgres://ydegdvfqmesyge:b7122132d6ed1db5dd421716d3975c55303bcdbabd173ffec2e427377d09488c@ec2-54-147-107-18.compute-1.amazonaws.com:5432/detfkjir4gck6k"
 #
 # If the connection URL is provided in the special DATABASE_URL environment
 # variable, Rails will automatically merge its configuration values on top of
@@ -81,7 +87,10 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  #database: saas_project_app_production
-  username: <%= ENV['SAAS_PROJECT_APP_DATABASE_USERNAME'] %>
-  password: <%= ENV['SAAS_PROJECT_APP_DATABASE_PASSWORD'] %>
+  #<<: *default
+  #database: postgres_production
+  url: <%= ENV['DATABASE_URL'] %>
+#username: <%= ENV['SAAS_PROJECT_APP_DATABASE_USERNAME'] %>
+#password: <%= ENV['SAAS_PROJECT_APP_DATABASE_PASSWORD'] %>
+
+  
