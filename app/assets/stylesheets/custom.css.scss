@@ -111,7 +111,10 @@
   .no-right-padding {
     padding-right: 0 !important;
   }
-  
+  .add-side-padding {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
   .table tr td {
     a.main-link {
       color: #428bca;

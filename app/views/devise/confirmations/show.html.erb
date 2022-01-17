@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Create Password</h4>
+  </div
+  <div class="panel-body">
+    <%= form_for(resource, as: resource_name, url: update_user_confirmation_path,
+                        :html => { :method => :put, :class => "form login"}) do |f| %>
+      <%= bootstrap_devise_error_messages! %>
+
+      <div class="form-group add-side-padding">
+        <%= f.label :password, :class => "control-label" %>
+        <%= f.password_field :password,  :class => 'form-control' %>
+      </div>
+
+    
+      <div class="form-group add-side-padding">
+        <%= f.label :password_confirmation, :class => "control-label" %>
+        <%= f.password_field :password_confirmation,  :class => 'form-control' %>
+      </div>
+
+      <div class="form-group add-side-padding">
+        <%= f.submit 'Create Password', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render 'devise/shared/links' %>
