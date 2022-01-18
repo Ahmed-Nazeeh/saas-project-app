@@ -1,4 +1,4 @@
-class ConfirmationController < Philia::ConfirmationsController
+class ConfirmationsController < Philia::ConfirmationsController
 
     def update
         if @confirmable.attempt_set_password(user_params)
@@ -50,7 +50,7 @@ class ConfirmationController < Philia::ConfirmationsController
         # else fall thru to show template which is form to set a password
         # upon SUBMIT, processing will continue from update
       end
-      
+
         def after_confirmation_path_for(recource_name, resource)
             if user_signed_in?
                 root_path
