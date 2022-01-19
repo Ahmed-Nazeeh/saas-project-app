@@ -10,8 +10,6 @@ gem 'pg', '~> 1.3.0.rc1'
 gem 'devise'
 #gem 'milia'
 gem 'philia', github: 'philsmy/philia', branch: 'main'
-gem 'twitter-bootstrap-rails'
-gem 'devise-bootstrap-views'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -24,14 +22,16 @@ gem 'webpacker', '~> 5.0'
 gem 'jquery-rails'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-#gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
+gem 'bootstrap-datepicker-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

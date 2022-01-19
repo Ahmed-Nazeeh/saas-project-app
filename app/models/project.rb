@@ -15,5 +15,6 @@ class Project < ApplicationRecord
       tenent.projects 
     else
       tenant.projects.order(:id).limit(1)
+    end
   end
 end
