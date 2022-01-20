@@ -10,7 +10,7 @@ gem 'pg', '~> 1.3.0.rc1'
 gem 'devise'
 #gem 'milia'
 gem 'philia', github: 'philsmy/philia', branch: 'main'
-
+gem 'aws-sdk'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
