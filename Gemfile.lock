@@ -1429,6 +1429,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    stripe (5.43.0)
     thor (1.2.1)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -1488,6 +1489,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (>= 6)
   selenium-webdriver
+  stripe
   turbolinks (~> 5)
   twitter-bootstrap-rails
   tzinfo-data

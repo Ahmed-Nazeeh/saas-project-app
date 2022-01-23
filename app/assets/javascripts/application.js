@@ -6,7 +6,19 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require twitter/bootstrap
 //= require bootstrap-datepicker
+
+
 //= require_tree .
 
+
+$(document).ready(function(){
+    $('.datepicker').datepicker({
+      format: "yyyy/mm/dd",
+      autoclose: true,
+      todayBtn: "linked",
+      todayHighlight: true
+    });
+  });

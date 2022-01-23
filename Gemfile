@@ -11,6 +11,7 @@ gem 'devise'
 #gem 'milia'
 gem 'philia', github: 'philsmy/philia', branch: 'main'
 gem 'aws-sdk'
+gem 'stripe'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -32,6 +33,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
+#gem 'flatpickr'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
