@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "SaasProjectApp" %></title>
     <%= csrf_meta_tags %>
-    
+    <%= favicon_link_tag asset_path ('icon.ico') %>
     <%= stylesheet_link_tag "application", :media => "all" %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
