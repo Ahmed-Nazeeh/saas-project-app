@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
+gem "font-awesome-rails"
 #gem 'flatpickr'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
